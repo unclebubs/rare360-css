@@ -1,0 +1,373 @@
+// Override Bootstrap's Sass default variables
+//
+// Nearly all variables in Bootstrap are written with the `!default` flag.
+// This allows you to override the default values of those variables before
+// you import Bootstrap's source Sass files.
+//
+// Overriding the default variable values is the best way to customize your
+// CSS without writing _new_ styles. For example, you can either change
+// `$body-color` or write more CSS that override's Bootstrap's CSS like so:
+// `body { color: red; }`.
+
+
+//
+// Bring in Bootstrap
+//
+
+// Option 1
+//
+// Import all of Bootstrap's CSS
+
+// @import "bootstrap/scss/bootstrap";
+
+// Option 2
+//
+// Place variable overrides first, then import just the styles you need. Note that some stylesheets are required no matter what.
+
+// Toggle global options
+$enable-gradients: true;
+$enable-shadows: true;
+
+$offcanvas-box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
+
+// Include functions first
+@import "bootstrap/scss/functions";
+
+// Customize some defaults
+$success: #7952b3;
+$body-color: #333;
+$body-bg: #fff;
+$border-radius: .4rem;
+$primary: #12C972;
+$secondary: #34025F;
+$light: #F7FEFF;
+$dark: #34025F;
+
+
+$btn-border-radius: 2rem;
+$btn-box-shadow: none;
+$btn-border-width: 0;
+
+$headings-color: #000;
+$body-color: #828C93;
+
+
+$body-font-family: "Plus Jakarta Sans", Arial, sans-serif;
+
+
+
+
+// Required
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/images";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+// @import "bootstrap/scss/tables";
+// @import "bootstrap/scss/forms";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/transitions";
+@import "bootstrap/scss/dropdown";
+// @import "bootstrap/scss/button-group";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar"; // Requires nav
+// @import "bootstrap/scss/card";
+// @import "bootstrap/scss/breadcrumb";
+// @import "bootstrap/scss/accordion";
+// @import "bootstrap/scss/pagination";
+// @import "bootstrap/scss/badge";
+// @import "bootstrap/scss/alert";
+// @import "bootstrap/scss/progress";
+// @import "bootstrap/scss/list-group";
+@import "bootstrap/scss/close";
+// @import "bootstrap/scss/toasts";
+@import "bootstrap/scss/modal"; // Requires transitions
+// @import "bootstrap/scss/tooltip";
+@import "bootstrap/scss/popover";
+// @import "bootstrap/scss/carousel";
+// @import "bootstrap/scss/spinners";
+@import "bootstrap/scss/offcanvas"; // Requires transitions
+// @import "bootstrap/scss/placeholders";
+
+// Helpers
+@import "bootstrap/scss/helpers";
+
+// Utilities
+@import "bootstrap/scss/utilities/api";
+
+
+//
+// Custom styles
+//
+
+@import "icon-list";
+@import url('https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400;1,700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+
+
+/**
+* START HEAD STYLES
+*/
+header {
+  @extend .py-4;
+  @extend .shadow-sm;
+  @extend .bg-dark;
+  @extend .sticky-top;
+}
+
+.main-nav {
+  @extend .navbar;
+  @extend .navbar-expand-lg;
+  @extend .navbar-dark;
+  background-image: none;
+}
+
+/**
+* END HEAD STYLES
+*/
+
+/**
+* START SECTION STYLES
+*/
+.section {
+  padding: 6.25rem 0;
+}
+
+.section-white {
+  @extend .bg-white;
+  @extend .section;
+}
+
+.section-primary {
+  @extend .bg-primary;
+  @extend .section;
+}
+
+.section-secondary {
+  @extend .bg-secondary;
+  @extend .section;
+  @extend .text-white;
+}
+
+.section-light {
+  @extend .bg-light;
+  @extend .section;
+}
+
+.sub-section {
+  @extend .m-0;
+  @extend .border;
+  @extend .border-1;
+}
+
+.sub-section .col.image {
+  @extend .px-0;
+}
+
+.sub-section .content {
+  @extend .p-5;
+}
+
+.sub-section .content .btn-arrow-white {
+  position: relative;
+  left: -1rem;
+}
+
+
+
+/**
+* END SECTION STYLES
+*/
+
+/**
+* START LOGO STYLES
+*/
+.logo {
+  height: 52px;
+}
+
+/**
+* END LOGO STYLES
+*/
+
+// style buttons
+.btn-arrow-clear {
+  @extend .btn-primary;
+  @extend .rounded-pill;
+  @extend .px-3;
+  @extend .fw-light;
+  background-color: transparent;
+  background-image: none !important;
+  color: $white;
+}
+
+.btn-arrow-clear:hover {
+  color: $white;
+}
+
+.btn-arrow-clear svg {
+  @extend .ms-2;
+}
+
+.btn-white {
+  @extend .btn-primary;
+  @extend .rounded-pill;
+  @extend .px-3;
+  @extend .fw-light;
+  background-color: $white;
+  background-image: none !important;
+  color: $secondary;
+}
+
+.btn-white:hover {
+  color: $white ;
+}
+
+.btn-arrow-white {
+  @extend .btn-primary;
+  @extend .rounded-pill;
+  @extend .px-3;
+  @extend .fw-light;
+  background-color: transparent;
+  background-image: none !important;
+  color: $secondary;
+  position: relative;
+  left: -1rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-arrow-white:hover {
+  color: $white;
+  background-color: $primary;
+}
+
+.btn-arrow-white svg {
+  @extend .ms-2;
+}
+
+
+/**
+* START HEADER STYLES
+*/
+.display-1 {
+  font-size: 4.875rem;
+  line-height: 5.125rem;
+  letter-spacing: -.12rem;
+  font-weight: 600;
+}
+
+.display-2 {
+  font-size: 3.25rem;
+  line-height: 3.56rem;
+  letter-spacing: 0;
+  font-weight: 600;
+}
+
+.hero {
+  height: 90vh;
+}
+
+.homepage-hero-bkg {
+  background-image: url(http://localhost:8080/assets/hero.png);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: contain;
+}
+
+.hero-h1 {
+  @extend .display-2;
+  @extend .px-3;
+}
+
+.hero-lead {
+  @extend .fs-6;
+  @extend .px-3;
+  @extend .pt-3;
+  @extend .pb-4;
+  @extend .fw-lighter;
+}
+
+.scroll-for-more {
+  @extend .fs-6;
+  @extend .px-3;
+}
+
+h2 {
+  @extend .fw-normal;
+  @extend .mb-4;
+  font-size: 1.06rem;
+  color: $primary;
+  padding-left: 3px;
+
+}
+
+h2::before {
+  content: '\2022 ';
+  position: relative;
+  left: -3px;
+  bottom: 2px;
+
+}
+
+h3 {
+  line-height: 2.18rem;
+  font-size: 1.75rem;
+}
+
+/**
+* END HEADER STYLES
+*/
+
+
+// @include media-breakpoint-up(sm) {
+//   .container-oversized {
+//     max-width: 676px;
+//   }
+// }
+
+
+
+// @include media-breakpoint-up(lg) {
+
+// }
+
+@include media-breakpoint-up(xl) {
+  .sub-section .content {
+    padding: 100px !important;
+  }
+}
+
+@include media-breakpoint-up(xxl) {
+  .container-oversized {
+    max-width: 1500px;
+  }
+}
+
+
+.bg-image {
+  background-image: url('http://localhost:8080/assets/businessmen-businesswomen-meeting-brainstorming-ideas.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+
+/**
+* START GET IN TOUCH STYLES
+*/
+
+.get-intouch-container {
+  padding: 120px 0;
+}
+
+/**
+* END GET IN TOUCH STYLES
+*/

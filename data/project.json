@@ -1,0 +1,19 @@
+{
+  "title": "My Handlebars Project",
+  "header": "Welcome to My Handlebars Page",
+  "description": "This is a simple example of using Handlebars with Webpack.",
+  "links": [
+    {
+      "text": "Home",
+      "url": "/"
+    },
+    {
+      "text": "About",
+      "url": "/about"
+    },
+    {
+      "text": "Contact",
+      "url": "/contact"
+    }
+  ]
+}
